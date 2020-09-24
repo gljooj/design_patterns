@@ -1,9 +1,8 @@
-from design-patterns.budget.budgets.budget_medium import BudgetMedium
-from design-patterns.budget.calculators.calc_taxes import CalcTaxes
-from design-patterns.budget.taxation.icms_taxes_type_calc import IcmsTaxesTypeCalc
 import unittest
 
-from design-patterns.budget.taxation.iss_taxes_type_calc import IssTaxesTypeCalc
+from design_patterns.budget.budgets.budget_medium import BudgetMedium
+from design_patterns.budget.calculators.calc_taxes import CalcTaxes
+from design_patterns.budget.taxation.taxes import IcmsTaxesTypeCalc, IssTaxesTypeCalc
 
 
 class TestBudgetMedium(unittest.TestCase):
@@ -15,8 +14,9 @@ class TestBudgetMedium(unittest.TestCase):
         icms = IcmsTaxesTypeCalc()
         iss = IssTaxesTypeCalc()
 
-        do_calc = calculator.do_calc(icms)
-        final_price = do_calc + budget.price
+        icms_calc = calculator.do_calc(icms)
+        iss_calc = calculator.do_calc(iss)
+        final_price = icms_calc + iss_calc + budget.price
 
-        print(final_price)
+        print("final price", final_price)
         assert final_price is not None

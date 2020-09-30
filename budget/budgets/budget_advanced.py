@@ -1,5 +1,5 @@
 # Budget = Orcamento
-class BudgetMediumWithDiscount(object):
+class BudgetAdvanced(object):
     def __init__(self):
         self.__items = []
 

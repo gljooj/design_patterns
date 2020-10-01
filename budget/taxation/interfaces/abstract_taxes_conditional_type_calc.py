@@ -1,9 +1,10 @@
 import abc
 
 from design_patterns.budget.budgets.budget_advanced import BudgetAdvanced
+from design_patterns.budget.taxation.services.taxes_next_taxes_service import TaxesNextTaxesService
 
 
-class AbstractTaxesConditionalTypeCalc:
+class AbstractTaxesConditionalTypeCalc(TaxesNextTaxesService):
     __metaclass__ = abc.ABCMeta
 
     def type_calc(self, budget: BudgetAdvanced):

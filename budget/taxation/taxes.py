@@ -5,22 +5,22 @@ from design_patterns.budget.taxation.interfaces.abstract_taxes_type_calc import 
 
 
 class IssTaxesTypeCalc(AbstractTaxesTypeCalc):
-    def type_calc(self, budget: BudgetMedium):
-        return budget.price * 0.1
+    def type_calc(self, budget):
+        return budget.price * 0.1 + self.calc_next_taxe(budget)
 
 
 class IcmsTaxesTypeCalc(AbstractTaxesTypeCalc):
-    def type_calc(self, budget: BudgetMedium):
-        return budget.price * 0.6
+    def type_calc(self, budget):
+        return budget.price * 0.6 + self.calc_next_taxe(budget)
 
 
 class ICPPTaxesTypeCalc(AbstractTaxesConditionalTypeCalc):
 
     def verify_taxation(self, budget):
         if budget.price > 500:
-            return self.maximum_taxation(budget)
+            return self.maximum_taxation(budget) + self.calc_next_taxe(budget)
         else:
-            return self.minimum_taxation(budget)
+            return self.minimum_taxation(budget) + self.calc_next_taxe(budget)
 
     def maximum_taxation(self, budget):
         return budget.price * 0.07
@@ -32,9 +32,9 @@ class ICPPTaxesTypeCalc(AbstractTaxesConditionalTypeCalc):
 class IKCVTaxesTypeCalc(AbstractTaxesConditionalTypeCalc):
     def verify_taxation(self, budget):
         if budget.price > 500 and self.__has_item_more_than_100_reais(budget):
-            return self.maximum_taxation(budget)
+            return self.maximum_taxation(budget) + self.calc_next_taxe(budget)
         else:
-            return self.minimum_taxation(budget)
+            return self.minimum_taxation(budget) + self.calc_next_taxe(budget)
 
     def maximum_taxation(self, budget):
         return budget.price * 0.1

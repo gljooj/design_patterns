@@ -4,7 +4,16 @@ from design_patterns.budget.taxation.interfaces.abstract_taxes_conditional_type_
 from design_patterns.budget.taxation.interfaces.abstract_taxes_type_calc import AbstractTaxesTypeCalc
 
 
+# PYTHON DECORATOR, it takes a function or method and do other action.
+def IPVX(function_or_method):
+    def wrapper(self, budget):
+        return function_or_method(self, budget) + 50.0
+
+    return wrapper
+
+
 class IssTaxesTypeCalc(AbstractTaxesTypeCalc):
+    @IPVX
     def type_calc(self, budget):
         return budget.price * 0.1 + self.calc_next_taxe(budget)
 

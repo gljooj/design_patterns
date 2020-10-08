@@ -5,6 +5,9 @@ from design_patterns.budget.discounts.interfaces.abstract_discount_type_calc imp
 
 
 class AbstractStatusBudgetInterface(AbstractDiscountTypeCalc):
+    def __init__(self):
+        self.discounted = False
+
     @abc.abstractmethod
     def approve(self, budget):
         pass

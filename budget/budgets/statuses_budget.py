@@ -4,7 +4,11 @@ from design_patterns.budget.budgets.interfaces.abstract_status_budget_interface 
 class StatusesBudget:
     class Analyze(AbstractStatusBudgetInterface):
         def type_calc(self, budget):
-            budget.add_extra_discount(budget.price * 0.02)
+            if not self.discounted:
+                budget.add_extra_discount(budget.price * 0.02)
+                self.discounted = True
+            else:
+                raise Exception("Discound is already Approved")
 
         def approve(self, budget):
             budget.actual_status = StatusesBudget.Approved()
@@ -17,7 +21,11 @@ class StatusesBudget:
 
     class Approved(AbstractStatusBudgetInterface):
         def type_calc(self, budget):
-            budget.add_extra_discount(budget.price * 0.05)
+            if not self.discounted:
+                budget.add_extra_discount(budget.price * 0.05)
+                self.discounted = True
+            else:
+                raise Exception("Discound is already Approved")
 
         def approve(self, budget):
             raise Exception("Status is already Approved")

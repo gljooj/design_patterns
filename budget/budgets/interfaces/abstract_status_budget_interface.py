@@ -1,5 +1,4 @@
 import abc
-from abc import ABCMeta
 
 from design_patterns.budget.discounts.interfaces.abstract_discount_type_calc import AbstractDiscountTypeCalc
 

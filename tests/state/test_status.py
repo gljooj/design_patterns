@@ -1,10 +1,6 @@
 import unittest
 
 from design_patterns.budget.budgets.budget_advanced import BudgetAdvanced, Item
-from design_patterns.budget.budgets.statuses_budget import StatusesBudget as Statuses
-from design_patterns.budget.calculators.calc_discounts import CalcDiscounts
-from design_patterns.budget.taxation.taxes import ICPPTaxesTypeCalc, IKCVTaxesTypeCalc
-
 
 class TestBudgetAdvanced(unittest.TestCase):
 
@@ -16,7 +12,6 @@ class TestBudgetAdvanced(unittest.TestCase):
 
         budget.approve()
         budget.get_extra_discount()
-        calculator = CalcDiscounts(budget)
         final_price = budget.price
 
         print(final_price)

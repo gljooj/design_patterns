@@ -3,6 +3,7 @@ from datetime import date
 
 from design_patterns.builders.invoice_builder import InvoiceBuilder
 from design_patterns.invoice.invoice import InvoiceItem
+from design_patterns.observers.observers import print_invoice, send_email, save_key_data_base
 
 
 class test_invoice(unittest.TestCase):
@@ -25,5 +26,8 @@ class test_invoice(unittest.TestCase):
             .company_name(data['company_name'])\
             .document(data['document'])\
             .emission_date(data['date'])\
-            .items(data['items']).\
-            details(data['details']).build()
+            .items(data['items'])\
+            .details(data['details'])\
+            .observers([print_invoice, send_email, save_key_data_base]).build()
+
+        assert invoice

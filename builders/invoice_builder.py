@@ -8,6 +8,7 @@ class InvoiceBuilder(object):
         self.__items = None
         self.__emission_date = None
         self.__details = None
+        self.__observers = []
 
     def company_name(self, company_name):
         self.__company_name = company_name
@@ -29,6 +30,10 @@ class InvoiceBuilder(object):
         self.__details = details
         return self
 
+    def observers(self, observers):
+        self.__observers = observers
+        return self
+
     def build(self):
         if self.__company_name is None:
             raise Exception('Company name was not informated')
@@ -40,4 +45,4 @@ class InvoiceBuilder(object):
             raise Exception('Details length must be less than 40 characters')
 
         return Invoice(company_name=self.company_name, document=self.__document, items=self.__items,
-                       emission_date=self.__emission_date, details=self.__details)
+                       emission_date=self.__emission_date, details=self.__details, observers=self.__observers)

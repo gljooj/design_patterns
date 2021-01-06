@@ -12,7 +12,7 @@ class AbstractStatusBudgetInterface(AbstractDiscountTypeCalc):
         pass
 
     @abc.abstractmethod
-    def desapprove(self, budget):
+    def disapprove(self, budget):
         pass
 
     @abc.abstractmethod

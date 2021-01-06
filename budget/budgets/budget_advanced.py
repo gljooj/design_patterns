@@ -12,8 +12,8 @@ class BudgetAdvanced(object):
     def approve(self):
         self.actual_status.approve(self)
 
-    def desapprove(self):
-        self.actual_status.desapprove(self)
+    def disapprove(self):
+        self.actual_status.disapprove(self)
 
     def finish(self):
         self.actual_status.finish(self)

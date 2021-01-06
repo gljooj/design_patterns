@@ -1,4 +1,4 @@
-from design_patterns.budget.budgets.interfaces.abstract_status_budget_interface import AbstractStatusBudgetInterface
+from budget.budgets.interfaces.abstract_status_budget_interface import AbstractStatusBudgetInterface
 
 
 class StatusesBudget:

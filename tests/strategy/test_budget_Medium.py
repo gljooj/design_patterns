@@ -1,8 +1,8 @@
 import unittest
 
-from design_patterns.budget.budgets.budget_medium import BudgetMedium
-from design_patterns.budget.calculators.calc_taxes import CalcTaxes
-from design_patterns.budget.taxation.taxes import IcmsTaxesTypeCalc, IssTaxesTypeCalc
+from budget.budgets.budget_medium import BudgetMedium
+from budget.calculators.calc_taxes import CalcTaxes
+from budget.taxation.taxes import IcmsTaxesTypeCalc, IssTaxesTypeCalc
 
 
 class TestBudgetMedium(unittest.TestCase):

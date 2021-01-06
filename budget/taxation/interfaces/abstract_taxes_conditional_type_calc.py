@@ -1,7 +1,7 @@
 import abc
 
-from design_patterns.budget.budgets.budget_advanced import BudgetAdvanced
-from design_patterns.budget.taxation.services.taxes_next_taxes_service import TaxesNextTaxesService
+from budget.budgets.budget_advanced import BudgetAdvanced
+from budget.taxation.services.taxes_next_taxes_service import TaxesNextTaxesService
 
 
 class AbstractTaxesConditionalTypeCalc(TaxesNextTaxesService):

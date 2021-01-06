@@ -1,9 +1,9 @@
 import unittest
 from datetime import date
 
-from design_patterns.builders.invoice_builder import InvoiceBuilder
-from design_patterns.invoice.invoice import InvoiceItem
-from design_patterns.observers.observers import print_invoice, send_email, save_key_data_base
+from builders.invoice_builder import InvoiceBuilder
+from invoice.invoice import InvoiceItem
+from observers.observers import print_invoice, send_email, save_key_data_base
 
 
 class test_invoice(unittest.TestCase):

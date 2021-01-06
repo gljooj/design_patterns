@@ -1,4 +1,4 @@
-from design_patterns.invoice.invoice import Invoice
+from invoice.invoice import Invoice
 
 
 class InvoiceBuilder(object):

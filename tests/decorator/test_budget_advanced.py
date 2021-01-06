@@ -1,7 +1,7 @@
 import unittest
-from design_patterns.budget.budgets.budget_advanced import BudgetAdvanced, Item
-from design_patterns.budget.calculators.calc_taxes import CalcTaxes
-from design_patterns.budget.taxation.taxes import ICPPTaxesTypeCalc, IKCVTaxesTypeCalc, IcmsTaxesTypeCalc, \
+from budget.budgets.budget_advanced import BudgetAdvanced, Item
+from budget.calculators.calc_taxes import CalcTaxes
+from budget.taxation.taxes import ICPPTaxesTypeCalc, IKCVTaxesTypeCalc, IcmsTaxesTypeCalc, \
     IssTaxesTypeCalc
 
 

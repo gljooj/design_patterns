@@ -1,6 +1,6 @@
 import unittest
 
-from design_patterns.budget.budgets.budget_advanced import BudgetAdvanced, Item
+from budget.budgets.budget_advanced import BudgetAdvanced, Item
 
 class TestBudgetAdvanced(unittest.TestCase):
 

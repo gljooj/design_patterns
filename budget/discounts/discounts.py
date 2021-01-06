@@ -1,5 +1,5 @@
-from design_patterns.budget.budgets.budget_advanced import BudgetAdvanced
-from design_patterns.budget.discounts.interfaces.abstract_discount_type_calc import AbstractDiscountTypeCalc
+from budget.budgets.budget_advanced import BudgetAdvanced
+from budget.discounts.interfaces.abstract_discount_type_calc import AbstractDiscountTypeCalc
 
 
 class verifyDiscount(AbstractDiscountTypeCalc):

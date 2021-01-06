@@ -1,5 +1,5 @@
-from design_patterns.budget.calculators.interfaces.abstract_calculator_medium import AbstractCalculatorMedium
-from design_patterns.budget.taxation.interfaces.abstract_taxes_type_calc import AbstractTaxesTypeCalc
+from budget.calculators.interfaces.abstract_calculator_medium import AbstractCalculatorMedium
+from budget.taxation.interfaces.abstract_taxes_type_calc import AbstractTaxesTypeCalc
 
 
 class CalcTaxes(AbstractCalculatorMedium):

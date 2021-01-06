@@ -1,6 +1,6 @@
 import abc
 
-from design_patterns.budget.taxation.services.taxes_next_taxes_service import TaxesNextTaxesService
+from budget.taxation.services.taxes_next_taxes_service import TaxesNextTaxesService
 
 
 class AbstractTaxesTypeCalc(TaxesNextTaxesService):

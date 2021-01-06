@@ -1,8 +1,8 @@
 import unittest
 
-from design_patterns.budget.budgets.budget_advanced import BudgetAdvanced, Item
-from design_patterns.budget.calculators.calc_discounts import CalcDiscounts
-from design_patterns.budget.discounts.discounts import verifyDiscount
+from budget.budgets.budget_advanced import BudgetAdvanced, Item
+from budget.calculators.calc_discounts import CalcDiscounts
+from budget.discounts.discounts import verifyDiscount
 
 
 class TestBudgetAdvanced(unittest.TestCase):

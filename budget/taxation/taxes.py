@@ -1,7 +1,7 @@
-from design_patterns.budget.budgets.budget_medium import BudgetMedium
-from design_patterns.budget.taxation.interfaces.abstract_taxes_conditional_type_calc import \
+from budget.budgets.budget_medium import BudgetMedium
+from budget.taxation.interfaces.abstract_taxes_conditional_type_calc import \
     AbstractTaxesConditionalTypeCalc
-from design_patterns.budget.taxation.interfaces.abstract_taxes_type_calc import AbstractTaxesTypeCalc
+from budget.taxation.interfaces.abstract_taxes_type_calc import AbstractTaxesTypeCalc
 
 
 # PYTHON DECORATOR, it takes a function or method and do other action.

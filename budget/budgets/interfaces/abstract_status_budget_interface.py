@@ -1,6 +1,6 @@
 import abc
 
-from design_patterns.budget.discounts.interfaces.abstract_discount_type_calc import AbstractDiscountTypeCalc
+from budget.discounts.interfaces.abstract_discount_type_calc import AbstractDiscountTypeCalc
 
 
 class AbstractStatusBudgetInterface(AbstractDiscountTypeCalc):
